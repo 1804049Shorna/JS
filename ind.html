@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is Body</h1>
+    <article  id="first-article">
+        <h1>Article 1</h1>
+        <p class="author"> Author Lorem ipsum dolor sit amet.</p>
+        <p class="description">Description : Lorem ipsum dolor sit.  </p>
+    </article>
+    <article  id="special">
+        <h1>Article 1</h1>
+        <p class="author"> Author Lorem ipsum dolor sit amet.</p>
+        <p class="description">Description : Lorem ipsum dolor sit.  </p>
+    </article>
+    <article  id="special">
+        <h1>Article 1</h1>
+        <p class="author"> Author Lorem ipsum dolor sit amet.</p>
+        <p class="description">Description : Lorem ipsum dolor sit.  </p>
+    </article>
+    <li id="list">
+        <ol>heloo</ol>
+        <ol>heloo</ol>
+        <ol>heloo</ol>
+        <ol>heloo</ol>
+    </li>
+    <script>
+        var authors=document.querySelectorAll("#special h1")
+        for(let i=0;i<authors.length;i++){
+            var element=authors[i];
+            element.style.backgroundColor="yellow";
+            element.innerHTML='Poet  -' +(i+1)
+        }
+
+        //inserting an new element 
+        const article=document.getElementById('first-article');
+        const newpara=document.createElement('p');
+        newpara.innerHTML='this is a new element';
+        article.appendChild(newpara);
+
+        const el=document.getElementById('list')
+        const oll=document.createElement('ol')
+        oll.innerHTML="This is a new order list"
+        el.appendChild(oll)
+
+        var elee=document.getElementById('list');
+        //to remove a child 
+        elee.parentNode.removeChild(elee)
+
+    </script>
+</body>
+</html>
