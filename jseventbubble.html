@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            height: 50px;
+            margin: 20px;
+        }
+        #container{
+            border: 5px black;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+   
+   <div id="container">
+     <button id="first">Click me </button>
+     <button id="first">Delete me </button>
+     <button id="first">Delete me </button>
+     <button id="first">Delete me </button>
+     <button id="first">Delete me </button>
+
+   
+
+   </div>
+   <button id="addnew"> add me</button>
+   
+    <script>
+       
+      
+      document.getElementById("first").addEventListener('click',function(event){
+        console.log("first button clicked")
+        event.stopPropagation()
+       })
+      
+     document.getElementById("container").addEventListener('click',function(event){
+       event.target.parentNode.removeChild(event.target)
+       })
+     document.getElementById("addnew").addEventListener('click',function(event){
+        const element=document.getElementById("container")
+        const neww=document.createElement("button")
+        neww.innerText='I am created'
+        element.appendChild(neww)
+     })
+    </script>
+</body>
+</html>
