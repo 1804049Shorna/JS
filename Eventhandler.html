@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <h1 onclick="handleclick()">Javascript Event</h1>
+    <button onclick="alert('You clicked me')">Click me </button>
+    <button id="first">Click me </button>
+    <button id="second">Click me </button>
+    <button id="Third">Click me </button>
+    <script>
+       function handleclick(){
+        console.log(" I am being clicked")
+       }
+       function bagcolor(){
+        document.body.style.backgroundColor='black'
+        document.body.style.color='white'
+       }
+       function bagcolor2(){
+        document.body.style.backgroundColor='white'
+        document.body.style.color='black'
+       }
+       const sec=document.getElementById("second")
+       const third=document.getElementById("Third")
+       third.onclick=bagcolor;
+       const fir=document.getElementById("first")
+       fir.onmouseenter=bagcolor;
+       fir.onmouseout=bagcolor2;
+
+    </script>
+</body>
+</html>
